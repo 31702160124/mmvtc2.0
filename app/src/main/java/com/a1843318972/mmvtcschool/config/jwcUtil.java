@@ -272,7 +272,6 @@ public class jwcUtil {
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 String html = response.body().string();
-                Log.e("jwcutil", username + "onResponse: " + html);
                 Document doc = Jsoup.parse(html);
                 // 部分个人信息 用于显示在手机界面上
                 String xh = doc.getElementById("xh").text();
